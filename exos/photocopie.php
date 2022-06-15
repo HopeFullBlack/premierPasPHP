@@ -1,10 +1,10 @@
 <?php
 $prix = null;
 if (
-    isset($_POST['photocopies']) &&
-    $_POST['photocopies'] !== "" &&
-    intval($_POST['photocopies']) > 0 &&
-    intval($_POST['photocopies']) <= 100
+    isset($_POST['photocopies']) && // $_POST['photocopies'] existe?
+    $_POST['photocopies'] !== "" && // $_POST['photocopies'] !== ""
+    intval($_POST['photocopies']) > 0 && // $_POST['photocopies'] > 0
+    intval($_POST['photocopies']) <= 100 // $_POST['photocopies'] <= 100
 ) {
     $nbPhotocopie = intval($_POST['photocopies']);
     $total = 0;
@@ -46,10 +46,11 @@ if (
         <br>
         <small>(minimum 1, maximum 100)</small>
     </label>
-    <br>
+    <br>a
     <button type="submit">Calculer</button>
 </form>
 <?php
+//affiche le contenu de $prix si $prix !== null
 echo $prix ?? '';
 ?>
 </body>
