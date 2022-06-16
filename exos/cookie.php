@@ -1,5 +1,6 @@
 <?php
 var_dump($_COOKIE);
+//setcookie('prixMasque', '',time() - 1);   //permet de supprimer un cookie
 if ($_COOKIE['prixAtrouve']) {
     $prixAtrouve = (int)$_COOKIE['prixAtrouve'];
 } else {
@@ -27,14 +28,17 @@ if ($_COOKIE['prixAtrouve']) {
 <?php
 $txtPrix = $_POST['prix'] ?? false;
 $prix = (int)$txtPrix; // identique à $prix = intval($txtPrix);
-if ($prix === $prixAtrouve) {
-    $resultat = "trouvé";
-} elseif ($prix > $prixAtrouve) {
-    $resultat = "Plus bas";
-} else {
-    $resultat = "Plus haut ! ";
+if ($prix > 0) {
+    if ($prix === $prixAtrouve) {
+        setcookie('prixAtrouve', random_int(1, 100), time() + (60 * 5));
+        $resultat = 'win<div><form action=""><button type="submit">Recommencer</button></form></div>';
+    } elseif ($prix > $prixAtrouve) {
+        $resultat = "Plus bas";
+    } else {
+        $resultat = "Plus haut ! ";
+    }
+    echo $resultat;
 }
-echo $resultat;
 ?>
 
 </body>

@@ -1,5 +1,6 @@
 <?php
 $_COOKIE['prixMasque'] ?? setcookie('prixMasque', random_int(1,100), time()+3600);
+var_dump($_COOKIE);
 ?>
 <!doctype html>
 <html lang="fr">
@@ -16,7 +17,9 @@ $_COOKIE['prixMasque'] ?? setcookie('prixMasque', random_int(1,100), time()+3600
     <label for="prix">Prix
         <input type="number" name="prix" placeholder="votre proposition">
     </label>
-    <small>Valeur comprise entre 1 et 100</small>
+    <p>
+        <small>Valeur comprise entre 1 et 100</small>
+    </p>
     <button type="submit">Envoyer</button>
 </form>
 
