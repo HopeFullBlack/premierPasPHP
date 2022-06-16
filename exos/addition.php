@@ -1,6 +1,6 @@
 <?php
 session_start();
-//permet d'afficher les erreur
+//permet d'afficher les erreurs
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
