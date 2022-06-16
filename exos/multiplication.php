@@ -14,9 +14,9 @@
         <select name="chiffre" id="chiffre">
             <option value="" selected>Choisir un chiffre</option>
             <?php
-            for ($i = 0; $i <= 10; $i++) {
-                echo "<option value='$i'>$i</option>";
-            }
+                for ($i = 0; $i <= 10; $i++) {
+                    echo "<option value='$i'>$i</option>";
+                }
             ?>
         </select>
     </label>
@@ -27,18 +27,15 @@
 
 <div>
     <?php
-    $result = null;
-    if (
-        isset($_POST['chiffre']) &&
-        $_POST['chiffre'] !== "" &&
-        intval($_POST['chiffre']) > 0 &&
-        intval($_POST['chiffre']) <= 10
-    ) {
-        for($i=1; $i<=10; $i++){
-            $resultat = $_POST['chiffre']*$i;
-            echo"<p>{$_POST['chiffre']} * $i = $resultat</p>";
+        //si $_POST['chiffre'] existe alors $postChiffre prend la valeur de $_POST['chiffre']
+        $postChiffre = $_POST['chiffre'] ?? false;
+        $chiffre = intval($postChiffre);        //$chiffre correspond à $postChiffre convertit en entier
+        if ($chiffre > 0 && $chiffre <= 10) {      //si chiffre compris entre 1 et 10
+            for ($i = 1; $i <= 10; $i++) {      //on affiche sa table de multiplication
+                $resultat = $chiffre * $i;
+                echo "<p>$chiffre * $i = $resultat</p>";
+            }
         }
-    }
     ?>
 </div>
 
