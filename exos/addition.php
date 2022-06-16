@@ -1,6 +1,11 @@
 <?php
+session_start();
+//permet d'afficher les erreur
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
+
+var_dump($_SESSION['prixAtrouve']);
+
 ?>
 <!doctype html>
 <html lang="fr">

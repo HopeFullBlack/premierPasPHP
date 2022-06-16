@@ -32,7 +32,7 @@ if ($prix > 0) { // si on a un chiffre valide (form posté)
     if ($prix === $prixAtrouve) {
         echo "ok";
         $prixAtrouve = random_int(1, 100);
-        $_SESSION['prixAtrouve'] = $prixAtrouve;*
+        $_SESSION['prixAtrouve'] = $prixAtrouve;
         //permet de rediriger le visiteur vers l'url
         header('Location: http://localhost/php/PremiersPasPHP/exos/session.php');
         exit;
