@@ -27,6 +27,7 @@
 
 <div>
     <?php
+    var_dump($_POST);
         //si $_POST['chiffre'] existe alors $postChiffre prend la valeur de $_POST['chiffre']
         $postChiffre = $_POST['chiffre'] ?? false;
         $chiffre = intval($postChiffre);        //$chiffre correspond à $postChiffre convertit en entier
