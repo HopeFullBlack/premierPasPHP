@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    var_dump($_SESSION);
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,23 +18,31 @@
 <body>
 <main class="container">
     <p>
-        <a href="addArticle.php">Ajouter</a>
+        <a href="addArticleTry.php">Ajouter</a>
     </p>
 <?php
 require_once 'cnxBdd.php';
 
-foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
+$stmt = $pdo->query("select * from article");
+$result = $stmt->fetchAll();
+
+//foreach ($pdo->query("select * from article")->fetchAll() as $key => $article) {
+foreach ($result as $key => $article) {
+    $dateCreation = new DateTime($article['dateCreation']);
     echo"
     <div class='card border-primary my-2' style='max-width: 20rem;'>
   <div class='card-header'>{$article['nom']} ({$article['id']})</div>
   <div class='card-body'>
     <h4 class='card-title'>{$article['prix']} &euro;</h4>
     <p class='card-text'>{$article['poids']} kg</p>
+    <p class='card-text'>{$dateCreation->format('d/m/Y H:i:s a')}</p>
     <p>
-    <form action='updateArticle.php?id={$article['id']}' method='post' class='mr-2'>
+    <form action='updateArticle.php' method='post' class='mr-2'>
+        <input type='hidden' name='id' value='{$article['id']}'>
         <button type='submit' class='btn btn-warning'>Modifier</button>
     </form>
-    <form action='deleteArticle.php?id={$article['id']}' method='post' class='mr-2'>
+    <form action='deleteArticle.php' method='post' class='mr-2'>
+        <input type='hidden' name='id' value='{$article['id']}'>
         <button type='submit' class='btn btn-danger'>Supprimer</button>
     </form>
 </p>
