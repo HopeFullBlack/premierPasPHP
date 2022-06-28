@@ -1,6 +1,6 @@
 grecaptcha.ready(function () {
 	grecaptcha
-		.execute("6LeEpZYgAAAAAJ8jyEDeUfh9hPKOZ1np8_jRDAOq", { action: "submit" })
+		.execute("your-public-key", { action: "submit" })
 		.then(function (token) {
 			// Add your logic to submit to your backend server here.
 			document.querySelector("#recaptchaResponse").value = token;

@@ -32,7 +32,7 @@ if (
 
     //captcha
     //on prepare l'url de vérification
-    $verifyUrl = "https://www.google.com/recaptcha/api/siteverify?secret=6LeEpZYgAAAAAJGe-7wvpxg4wTeqkjvbWml5-x6W&response={$_POST['recaptchaResponse']}";
+    $verifyUrl = "https://www.google.com/recaptcha/api/siteverify?secret=your-private-keyW&response={$_POST['recaptchaResponse']}";
 
     //on créer une instance de curl
     $curl = curl_init($verifyUrl);
@@ -70,18 +70,15 @@ if (
                 // $mail->Host       = 'localhost';                     //Set the SMTP server to send through
                 $mail->SMTPAuth = true;                                   //Enable SMTP authentication
 //                $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
-                // $mail->Username   = 'user@example.com';                     //SMTP username
-                $mail->Username = 'kardwane@gmail.com';                     //SMTP username
-                // $mail->Password   = 'secret';                               //SMTP password
-                $mail->Password = 'mhpudwnabkduzhvq';                               //SMTP password
+                 $mail->Username   = 'user@example.com';                     //SMTP username
+                 $mail->Password   = 'secret';                               //SMTP password
                 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
                 $mail->Port = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-//                $mail->Port       = 1025;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
-                $mail->setFrom('kardwane@gmail.com', 'me sender');
-                $mail->addAddress('pierre.brusselle@afci-formation.fr', 'me user');     //Add a recipient
+                $mail->setFrom('alice@domain.ext', 'me sender');
+                $mail->addAddress('bobe@email.extension', 'Bob user');     //Add a recipient
                 // $mail->addAddress('ellen@example.com');               //Name is optional
                 // $mail->addReplyTo('info@example.com', 'Information');
                 // $mail->addCC('cc@example.com');
