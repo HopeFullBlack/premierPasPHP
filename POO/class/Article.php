@@ -1,17 +1,13 @@
 <?php
 
-namespace POO;
+namespace POO\Class;
 
 use PDO;
+use POO\Class\ConstInfo as appInfo;
 
 class Article
 {
-    private const DB_HOST = 'localhost';
-    private const DB_NAME = 'blogmano';
-    private const DB_USER = 'blogmano';
-    private const DB_PWD = '8H!*SE]FOSeDF7K7';
-    private const DB_DSN = 'mysql:dbname=' . self::DB_NAME . ';host=' . self::DB_HOST . ';port=3306;charset=utf8';
-
+   
     public function __construct(
         private int       $id,
         private int       $author,
@@ -133,7 +129,7 @@ class Article
     //methode perso
     public static function getAllArticle()
     {
-        $pdo = new PDO(self::DB_DSN, self::DB_USER, self::DB_PWD);
+        $pdo = new PDO(appInfo::DB_DSN, appInfo::DB_USER, appInfo::DB_PWD);
         return $pdo->query('select * from article')->fetchAll(PDO::FETCH_OBJ);
     }
 

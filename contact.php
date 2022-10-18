@@ -47,25 +47,16 @@ if (
 //                $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        //$mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->Host = 'localhost';                     //Set the SMTP server to send through
-        // $mail->SMTPAuth = true;                                   //Enable SMTP authentication
         $mail->SMTPAuth = false;                                   //Enable SMTP authentication
-        //$mail->Username   = 'user@example.com';                     //SMTP username
-        //$mail->Password   = 'secret';                               //SMTP password
-        // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port = 1025;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
         $mail->setFrom('jaiparcouru@lechemin.kyo', 'me sender');
         $mail->addAddress('bobe@email.extension', 'Bob user');     //Add a recipient
-        // $mail->addAddress('ellen@example.com');               //Name is optional
-        // $mail->addReplyTo('info@example.com', 'Information');
-        // $mail->addCC('cc@example.com');
-        // $mail->addBCC('bcc@example.com');
 
         //Attachments
+        $mail->addAttachment('C:\Users\DELL002\Desktop\ramonetout.jpg');         //Add attachments
         // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
