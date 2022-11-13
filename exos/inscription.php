@@ -34,7 +34,7 @@
     //je verifie que le mdp n'est pas null et que le mail soit valide
     if (!is_null($mdp) && filter_var($email, FILTER_VALIDATE_EMAIL) !== false) {
         require_once 'cnxBdd.php';
-        $stmt = $pdo->prepare("insert into user values (null, :email, :mdp)");
+        $stmt = $pdo->prepare("insert into User values (null, :email, :mdp)");
         $res = $stmt->execute([
             ':email' => $email,
             ':mdp' => password_hash($mdp, PASSWORD_ARGON2I)

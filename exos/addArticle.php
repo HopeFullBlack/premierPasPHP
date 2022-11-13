@@ -36,17 +36,17 @@
             ':prix' => $prix,
         ])){
             echo '
-            <div class="alert alert-dismissible alert-success">
-              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <div Class="alert alert-dismissible alert-success">
+              <button type="button" Class="btn-close" data-bs-dismiss="alert"></button>
               <strong>Bravo!</strong> Article créer avec succès 
-              <a href="#" class="alert-link"> blabla </a>.
+              <a href="#" Class="alert-link"> blabla </a>.
             </div>
             ';
         } else {
             echo '
-            <div class="alert alert-dismissible alert-danger">
-              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              <strong>Erreur!</strong> <a href="#" class="alert-link">Une erreur est survenue lors de la création de l\'article
+            <div Class="alert alert-dismissible alert-danger">
+              <button type="button" Class="btn-close" data-bs-dismiss="alert"></button>
+              <strong>Erreur!</strong> <a href="#" Class="alert-link">Une erreur est survenue lors de la création de l\'article
             </a> and try submitting again.
             </div>
             ';

@@ -2,5 +2,13 @@
   "require": {
     "phpmailer/phpmailer": "^6.6",
     "ext-pdo": "*"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "POO\\" : "POO/"
+    }
   }
 }

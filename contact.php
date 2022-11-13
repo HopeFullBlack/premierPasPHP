@@ -53,7 +53,7 @@ if (
 
         //Recipients
         $mail->setFrom('jaiparcouru@lechemin.kyo', 'me sender');
-        $mail->addAddress('bobe@email.extension', 'Bob user');     //Add a recipient
+        $mail->addAddress('bobe@email.extension', 'Bob User');     //Add a recipient
 
         //Attachments
         $mail->addAttachment('C:\Users\DELL002\Desktop\ramonetout.jpg');         //Add attachments
@@ -120,7 +120,7 @@ if (
                 $mail->Host       = 'localhost';                     //Set the SMTP server to send through
                 // $mail->SMTPAuth = true;                                   //Enable SMTP authentication
                 $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
-                 //$mail->Username   = 'user@example.com';                     //SMTP username
+                 //$mail->Username   = 'User@example.com';                     //SMTP username
                  //$mail->Password   = 'secret';                               //SMTP password
                 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
@@ -128,7 +128,7 @@ if (
 
                 //Recipients
                 $mail->setFrom('alice@domain.ext', 'me sender');
-                $mail->addAddress('bobe@email.extension', 'Bob user');     //Add a recipient
+                $mail->addAddress('bobe@email.extension', 'Bob User');     //Add a recipient
                 // $mail->addAddress('ellen@example.com');               //Name is optional
                 // $mail->addReplyTo('info@example.com', 'Information');
                 // $mail->addCC('cc@example.com');

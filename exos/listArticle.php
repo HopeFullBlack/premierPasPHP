@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['User'])){
     var_dump($_SESSION);
 }
 ?>
@@ -30,20 +30,20 @@ $result = $stmt->fetchAll();
 foreach ($result as $key => $article) {
     $dateCreation = new DateTime($article['dateCreation']);
     echo"
-    <div class='card border-primary my-2' style='max-width: 20rem;'>
-  <div class='card-header'>{$article['nom']} ({$article['id']})</div>
-  <div class='card-body'>
-    <h4 class='card-title'>{$article['prix']} &euro;</h4>
-    <p class='card-text'>{$article['poids']} kg</p>
-    <p class='card-text'>{$dateCreation->format('d/m/Y H:i:s a')}</p>
+    <div Class='card border-primary my-2' style='max-width: 20rem;'>
+  <div Class='card-header'>{$article['nom']} ({$article['id']})</div>
+  <div Class='card-body'>
+    <h4 Class='card-title'>{$article['prix']} &euro;</h4>
+    <p Class='card-text'>{$article['poids']} kg</p>
+    <p Class='card-text'>{$dateCreation->format('d/m/Y H:i:s a')}</p>
     <p>
-    <form action='updateArticle.php' method='post' class='mr-2'>
+    <form action='updateArticle.php' method='post' Class='mr-2'>
         <input type='hidden' name='id' value='{$article['id']}'>
-        <button type='submit' class='btn btn-warning'>Modifier</button>
+        <button type='submit' Class='btn btn-warning'>Modifier</button>
     </form>
-    <form action='deleteArticle.php' method='post' class='mr-2'>
+    <form action='deleteArticle.php' method='post' Class='mr-2'>
         <input type='hidden' name='id' value='{$article['id']}'>
-        <button type='submit' class='btn btn-danger'>Supprimer</button>
+        <button type='submit' Class='btn btn-danger'>Supprimer</button>
     </form>
 </p>
   </div>

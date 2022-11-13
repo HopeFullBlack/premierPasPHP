@@ -38,20 +38,20 @@
         if (!is_null($mdp) && filter_var($email, FILTER_VALIDATE_EMAIL) !== false) {
             require_once 'cnxBdd.php';
 
-            $stmt = $pdo->prepare("select * from user where email = :email");
+            $stmt = $pdo->prepare("select * from User where email = :email");
 
             if ($stmt->execute([
                 ':email' => $email
             ])) {
                 //si je trouve mon utilisateur en bdd
                 if ($stmt->rowCount() === 1) {
-                    // je le lie a ma var $user
+                    // je le lie a ma var $User
                     $user = $stmt->fetch();
 
                     //mdp identique?
                     if (password_verify($mdp, $user['mdp'])) {
                         session_start();
-                        $_SESSION['user'] = $user;
+                        $_SESSION['User'] = $user;
                         var_dump($_SESSION);
                     }
                 } else {
@@ -61,9 +61,9 @@
         }
     } catch (PDOException|Exception $Exception) {
         echo '
-            <div class="alert alert-dismissible alert-danger">
-              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-              <strong>Erreur!</strong> <a href="#" class="alert-link">Une erreur est survenue : ' . $Exception->getMessage() . '
+            <div Class="alert alert-dismissible alert-danger">
+              <button type="button" Class="btn-close" data-bs-dismiss="alert"></button>
+              <strong>Erreur!</strong> <a href="#" Class="alert-link">Une erreur est survenue : ' . $Exception->getMessage() . '
             </a> and try submitting again.
             </div>
             ';
