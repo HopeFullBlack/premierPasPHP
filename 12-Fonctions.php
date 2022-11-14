@@ -11,9 +11,10 @@ affiche();
 function affiche()
 {
     echo additionne(1,5).'<br>';
+    echo additionne(5,5).'<br>';
 }
 
-function additionne ($a,$b)
+function additionne($a,$b)
 {
     return $a+$b;
 }

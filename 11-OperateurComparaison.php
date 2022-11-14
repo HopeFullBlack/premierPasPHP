@@ -16,3 +16,10 @@ else
     else echo '$a et $b sont différents';
 }
 
+
+$c = 4;
+$d = 8;
+
+//la différence
+if ($c!==$d) echo "<hr>\$c et différent de \$d";
+if ($c!==$d) echo '<hr>$c et différent de $d';
