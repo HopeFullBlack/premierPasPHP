@@ -45,14 +45,13 @@
             ])) {
                 //si je trouve mon utilisateur en bdd
                 if ($stmt->rowCount() === 1) {
-                    // je le lie a ma var $User
+                    // je le lie a ma var $user
                     $user = $stmt->fetch();
 
                     //mdp identique?
                     if (password_verify($mdp, $user['mdp'])) {
                         session_start();
                         $_SESSION['User'] = $user;
-                        var_dump($_SESSION);
                     }
                 } else {
                     throw new Exception('erreur avec le mail ou le mdp');
