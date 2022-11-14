@@ -8,7 +8,7 @@ $resteArendreCopie= $resteArendre;
 $nb10 = 0;
 $nb5 = 0;
 
-//billet de 10
+//billets de 10
 while ($resteArendre > 10) {
     $nb10++;
     $resteArendre -= 10;

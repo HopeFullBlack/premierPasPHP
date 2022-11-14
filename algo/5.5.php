@@ -1,10 +1,10 @@
 <?php
 
 $chiffre = 7;
-$res = 0;
+$cumul = 1;
 
-for ($i = 1; $i <= $chiffre; $i++) {
-    $res += $i;
+for ($i = 2; $i <= $chiffre; $i++) {
+    $cumul += $i;
 }
 
-echo "résultat de 1+...+$chiffre = $res";
+echo "résultat de 1+...+$chiffre = $cumul";
