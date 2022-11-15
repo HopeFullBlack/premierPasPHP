@@ -11,4 +11,3 @@ for ($i = 0; $i < count($tab1); $i++) {
 }
 
 echo "le schtroumpf vaut $schtroupmf";
-

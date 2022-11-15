@@ -10,6 +10,6 @@ $pwd = 'fvi)EHDk5ya67zgO';
 
 //créer la connexion a la bdd
 $pdo = new PDO($dsn, $user, $pwd, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // permet d'activer le mode verbeux pur les erreurs
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // permet d'activer le mode verbeux pour les erreurs
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC    // lire les enregistrement comme un tableau
 ]);
