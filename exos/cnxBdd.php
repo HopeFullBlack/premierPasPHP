@@ -3,10 +3,12 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
+// caracteristique de la connexion
 $dsn = 'mysql:dbname=test;host=localhost;port=3306;charset=utf8';
 
-$user = 'test';
-$pwd = 'fvi)EHDk5ya67zgO';
+//info de connexion
+$user = 'test';     // root
+$pwd = 'fvi)EHDk5ya67zgO'; // 
 
 //créer la connexion a la bdd
 $pdo = new PDO($dsn, $user, $pwd, [
