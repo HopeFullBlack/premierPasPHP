@@ -1,0 +1,28 @@
+<section class="container p-3">
+    <form action="./inc/actions/traitementAjout.php" method="post">
+        <div class="field">
+            <label class="label">Titre</label>
+            <div class="control">
+                <input class="input" type="text" name="title" placeholder="Titre de la tâche" maxlength="50" required>
+            </div>
+            <p class="help">Maximum 50 caractères</p>
+        </div>
+        <div class="field">
+            <label class="label">Description de la tâche</label>
+            <div class="control">
+                <input class="input" type="text" name="description" placeholder="Description de la tâche" maxlength="150" required>
+            </div>
+            <p class="help">Maximum 150 caractères</p>
+        </div>
+        <div class="field">
+            <label class="label">Date de fin</label>
+            <div class="control">
+                <input class="input" type="datetime-local" name="deadline" placeholder="date butoir" required>
+            </div>
+            <p class="help">La date dois être valable et dans le futur</p>
+        </div>
+        <div class="control">
+            <button type="submit" class="button is-primary">Ajouter</button>
+        </div>
+    </form>
+</section>
