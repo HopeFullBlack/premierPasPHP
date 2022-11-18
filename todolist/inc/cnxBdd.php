@@ -8,7 +8,7 @@ $dsn = 'mysql:dbname=todolist;host=localhost;port=3306;charset=utf8';
 
 //info de connexion
 $user = 'todolist'; 
-$pwd = '@Gyf2[/q0_fWaVbT'; // 
+$pwd = '@Gyf2[/q0_fWaVbT'; 
 
 //créer la connexion a la bdd
 $pdo = new PDO($dsn, $user, $pwd, [

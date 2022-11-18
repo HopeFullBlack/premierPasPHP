@@ -1,4 +1,5 @@
 <?php
+// créer une nouvelle session ou récupere une session existante
 session_start();
 ?>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todolist</title>
     <link rel="stylesheet" href="./inc/css/styles.css">
-    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="./../node_modules/bulma/css/bulma.min.css">
     <script src="./inc/js/script.js" defer></script>
 </head>
 

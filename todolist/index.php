@@ -34,3 +34,22 @@ if ($page !== './index.php') {
 
 //footer
 require_once './inc/footer.php';
+
+?>
+
+<div class="modal" id="confirmModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Confirmation de suppresion</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body has-text-black-bis  ">
+      Êtes-vous sure de vouloir supprimer cette tâche?
+    </section>
+    <footer class="modal-card-foot">
+      <button id="deleteBtn" class="button is-success">Oui</button>
+      <button class="button is-info">Non</button>
+    </footer>
+  </div>
+</div>

@@ -18,15 +18,14 @@ try {
         $isDeadLineValid = false;
     }
 } catch (Exception  $error) {
-    // die(var_dump($error));
     $isDeadLineValid = false;
 }
 
 //vérification des données avant enregistrement
 if (
-    !is_null($title) && strlen($title) < 50 &&
-    !is_null($description) && strlen($description) < 150 &&
-    !is_null($deadline) && $isDeadLineValid &&
+    !empty($title) && strlen($title) < 50 &&
+    !empty($description) && strlen($description) < 150 &&
+    !empty($deadline) && $isDeadLineValid &&
     $id > 0
 ) {
     require_once './../../inc/cnxBdd.php';

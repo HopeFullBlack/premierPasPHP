@@ -28,11 +28,14 @@
                     <input type='hidden' name='updateId' value='{$todo['id']}'>
                     <button type='submit' class='button is-info'>Modifier</button>
                 </form>
-                <form action='./inc/actions/delete.php' class='ml-3' method='post'>
+                <form action='./inc/actions/delete.php' id='delete{$todo['id']}' class='display-none' method='post'>
                     <input type='hidden' name='page' value='./inc/actions/delete'>
                     <input type='hidden' name='deleteId' value='{$todo['id']}'>
                     <button type='submit' class='button is-danger'>Supprimer</button>
                 </form>
+                <button class='button is-danger js-modal-trigger ml-3' data-target='confirmModal'>
+                    Open JS example modal
+                </button>
             </footer>
         </div>
     </article>

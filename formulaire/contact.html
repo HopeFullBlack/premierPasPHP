@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact</title>
+		<link rel="stylesheet" href="./../node_modules/bulma/css/bulma.min.css" />
+		<link
+			href="./../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="./../node_modules/@fortawesome/fontawesome-free/css/brands.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="./../node_modules/@fortawesome/fontawesome-free/css/solid.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://www.google.com/recaptcha/api.js?render=your-public-key"></script>
+		<script defer src="./script.js"></script>
+	</head>
+	<body>
+		<main class="container">
+			<div id="resmail"></div>
+
+			<h1 class="title is-1 mt-3">Contactez-nous !</h1>
+
+			<form
+				action="contact.php"
+				id="contactForm"
+				method="post"
+				enctype="multipart/form-data"
+			>
+				<div class="field">
+					<label class="label">Votre nom *</label>
+					<div class="control has-icons-left">
+						<input
+							class="input"
+							type="text"
+							name="nom"
+							id="nom"
+							placeholder="Nom"
+							required
+						/>
+						<span class="icon is-small is-left">
+							<i class="fas fa-user"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Email *</label>
+					<div class="control has-icons-left">
+						<input
+							class="input"
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Email"
+							required
+						/>
+						<span class="icon is-small is-left">
+							<i class="fa-solid fa-at"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Message *</label>
+					<div class="control has-icons-left">
+						<textarea
+							class="textarea pl-6"
+							placeholder="Votre message"
+							id="message"
+							name="message"
+							required
+						></textarea>
+						<span class="icon is-small is-left">
+							<i class="fas fa-envelope"></i>
+						</span>
+					</div>
+				</div>
+
+				<p class="help my-3">* : Champ requis</p>
+
+				<input type="hidden" name="recaptchaResponse" id="recaptchaResponse" />
+
+				<button type="submit" class="button is-primary">Envoyer</button>
+			</form>
+		</main>
+	</body>
+</html>
