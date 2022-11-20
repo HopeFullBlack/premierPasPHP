@@ -4,11 +4,8 @@ namespace POO\Heritage;
 
 class CofeeMachine
 {
-    public int $cups;
-
-    public function __construct(int $cups)
+    public function __construct(public int $cups)
     {
-        $this->cups = $cups;
     }
 
     public function select(string $selection)

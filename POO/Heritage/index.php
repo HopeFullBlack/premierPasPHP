@@ -14,6 +14,13 @@ require_once '../../vendor/autoload.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            display: grid;
+            grid-template-rows:  10vh auto 10vh;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
 <header>

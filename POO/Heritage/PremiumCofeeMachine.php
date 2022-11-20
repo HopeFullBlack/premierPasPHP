@@ -2,7 +2,7 @@
 
 namespace POO\Heritage;
 
-class PremiumCofeeMachine extends CofeeMachine
+final class PremiumCofeeMachine extends CofeeMachine
 {
 //    protected int $cup = 2;
 
