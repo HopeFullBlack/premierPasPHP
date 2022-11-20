@@ -1,0 +1,15 @@
+body {
+  display: grid;
+  grid-template-rows: 10vh auto 10vh;
+  min-height: 100vh;
+}
+body header {
+  width: 100%;
+  text-align: center;
+}
+body footer {
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

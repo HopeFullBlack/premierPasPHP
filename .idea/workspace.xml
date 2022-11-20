@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="17d4f0e7-b804-4f0c-9028-d5a21bc5db47" name="Changes" comment="ajout abstract, late static binding, interface et trait">
+      <change afterPath="$PROJECT_DIR$/POO/Abstract/BMW.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Abstract/Peugeot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Abstract/Vehicule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Abstract/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/BasicPDF.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/PDFDowloaderService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/PDFDownloaderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/PNGDownloaderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/PremiumPDF.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Interface/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/LSB/ChildClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/LSB/ParentClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/LSB/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/CofeeMaker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/EspressoMaker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/EspressoTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/IrishMaker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/IrishTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/MultiCoffeeMaker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POO/Trait/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO/Heritage/CofeeMachine.php" beforeDir="false" afterPath="$PROJECT_DIR$/POO/Heritage/CofeeMachine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO/Heritage/PremiumCofeeMachine.php" beforeDir="false" afterPath="$PROJECT_DIR$/POO/Heritage/PremiumCofeeMachine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO/Heritage/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/POO/Heritage/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO/Heritage/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/POO/Heritage/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2HasoMR4bn2ZCN4tm552QmUWxLS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/htdocs/premierPasPHP/POO/Trait",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\premierPasPHP\POO\Trait" />
+      <recent name="C:\xampp\htdocs\premierPasPHP\POO\LSB" />
+      <recent name="C:\xampp\htdocs\premierPasPHP\POO\Interface" />
+      <recent name="C:\xampp\htdocs\premierPasPHP\POO\Abstract" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17d4f0e7-b804-4f0c-9028-d5a21bc5db47" name="Changes" comment="" />
+      <created>1668534705734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668534705734</updated>
+      <workItem from="1668534708072" duration="5440000" />
+      <workItem from="1668947168295" duration="2465000" />
+      <workItem from="1668956413901" duration="13435000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="dev" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ajout abstract, late static binding, interface et trait" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout abstract, late static binding, interface et trait" />
+  </component>
+</project>

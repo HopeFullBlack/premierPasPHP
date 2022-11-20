@@ -1,0 +1,107 @@
+Index: POO/Heritage/PremiumCofeeMachine.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace POO\\Heritage;\r\n\r\nclass PremiumCofeeMachine extends CofeeMachine\r\n{\r\n//    protected int $cup = 2;\r\n\r\n    public function __construct(int $cups)\r\n    {\r\n        parent::__construct($cups);\r\n        dump('code perso premium');\r\n    }\r\n\r\n    public function select(string $selection)\r\n    {\r\n        return match ($selection) {\r\n            'espresso' => $this->makeEspresso(),\r\n            'vanilla' => $this->makeVanilla(),\r\n            default => 'erreur'\r\n        };\r\n    }\r\n\r\n    protected function makeVanilla(): void\r\n    {\r\n        for ($i = 1; $i <= $this->cups; $i++) {\r\n            echo \"Café vanille n°$i servi(s)!<br>\";\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/POO/Heritage/PremiumCofeeMachine.php b/POO/Heritage/PremiumCofeeMachine.php
+--- a/POO/Heritage/PremiumCofeeMachine.php	(revision a9b1cf74852c1a76386566105bad075db1c7f9e6)
++++ b/POO/Heritage/PremiumCofeeMachine.php	(date 1668536653386)
+@@ -2,7 +2,7 @@
+ 
+ namespace POO\Heritage;
+ 
+-class PremiumCofeeMachine extends CofeeMachine
++final class PremiumCofeeMachine extends CofeeMachine
+ {
+ //    protected int $cup = 2;
+ 
+Index: POO/Heritage/index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace POO\\Heritage;\r\n\r\nrequire_once '../../vendor/autoload.php';\r\n\r\n?>\r\n<!doctype html>\r\n<html lang=\"fr\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\"\r\n          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n    <title>Document</title>\r\n    <link rel=\"stylesheet\" href=\"./style.css\">\r\n</head>\r\n<body>\r\n<header>\r\n    navbar\r\n</header>\r\n<main>\r\n\r\n    <?php\r\n\r\n    //$cofeeMachine = new CofeeMachine(2);\r\n    //$cofeeMachine->select('espresso');\r\n\r\n    $premiumCofeeMachine = new PremiumCofeeMachine(3);\r\n    $premiumCofeeMachine->select('vanilla');\r\n    ?>\r\n\r\n</main>\r\n<footer>\r\n    fait par &copy; moi même\r\n</footer>\r\n</body>\r\n</html>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/POO/Heritage/index.php b/POO/Heritage/index.php
+--- a/POO/Heritage/index.php	(revision a9b1cf74852c1a76386566105bad075db1c7f9e6)
++++ b/POO/Heritage/index.php	(date 1668536491050)
+@@ -14,6 +14,13 @@
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <link rel="stylesheet" href="./style.css">
++    <style>
++        body{
++            display: grid;
++            grid-template-rows:  10vh auto 10vh;
++            min-height: 100vh;
++        }
++    </style>
+ </head>
+ <body>
+ <header>
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Découverte de PHP\r\n\r\n## intro\r\n\r\n\r\n****\r\n\r\n## procedurale\r\n\r\n\r\n****\r\n\r\n## POO\r\n\r\nordre a suivre :\r\n\r\n - Cart : exemple de class PHP\r\n - Namespace\r\n - Autoloader via composer\r\n - Constantes\r\n - Enum\r\n - Static\r\n - Heritage\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision a9b1cf74852c1a76386566105bad075db1c7f9e6)
++++ b/README.md	(date 1668536808244)
+@@ -21,5 +21,6 @@
+  - Enum
+  - Static
+  - Heritage
++ - Abstract
+ 
+ 
+Index: POO/Heritage/CofeeMachine.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace POO\\Heritage;\r\n\r\nclass CofeeMachine\r\n{\r\n    public int $cups;\r\n\r\n    public function __construct(int $cups)\r\n    {\r\n        $this->cups = $cups;\r\n    }\r\n\r\n    public function select(string $selection)\r\n    {\r\n        return match ($selection) {\r\n            'espresso' => $this->makeEspresso(),\r\n            default => 'erreur'\r\n        };\r\n    }\r\n\r\n    public function makeEspresso(): void\r\n    {\r\n        for ($i = 1; $i <= $this->cups; $i++) {\r\n            echo \"Café n°$i servi(s)!<br>\";\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/POO/Heritage/CofeeMachine.php b/POO/Heritage/CofeeMachine.php
+--- a/POO/Heritage/CofeeMachine.php	(revision a9b1cf74852c1a76386566105bad075db1c7f9e6)
++++ b/POO/Heritage/CofeeMachine.php	(date 1668536590251)
+@@ -4,11 +4,8 @@
+ 
+ class CofeeMachine
+ {
+-    public int $cups;
+-
+-    public function __construct(int $cups)
++    public function __construct(public int $cups)
+     {
+-        $this->cups = $cups;
+     }
+ 
+     public function select(string $selection)
+Index: POO/Abstract/Vehicule.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/POO/Abstract/Vehicule.php b/POO/Abstract/Vehicule.php
+new file mode 100644
+--- /dev/null	(date 1668549234064)
++++ b/POO/Abstract/Vehicule.php	(date 1668549234064)
+@@ -0,0 +1,14 @@
++<?php
++
++namespace POO\Abstract;
++
++abstract class Vehicule
++{
++    public function __construct(protected string $marque)
++    {}
++
++    public function getMarque(): string
++    {
++        return 'je roule en ' . $this->marque;
++    }
++}
